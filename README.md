@@ -5,7 +5,7 @@ mounted in a car, running a YOLO26n detector at ~15 FPS on CPU, with an audible 
 LCD feed for the driver.
 
 <p align="center">
-  <img src="images/road-test-087.jpg" width="480"><br>
+  <img src="docs/images/road-test-087.jpg" width="480"><br>
   <em>Live road test with a deer correctly detected at 0.87 confidence.</em>
 </p>
 
@@ -63,13 +63,13 @@ The model was trained locally on an RTX 4070 (PyTorch + CUDA).
 | Mount/clamp | GoPro camera mount (sensor retrofitted into it) with 3M VHB adhesive |
 
 <p align="center">
-  <img src="images/camera-hood-mount.jpeg" width="480"><br>
+  <img src="docs/images/camera-hood-mount.jpeg" width="480"><br>
   <em>Front hood mount of the camera</em>
 </p>
 
 
 <p align="center">
-  <img src="images/driver-screen.jpeg" width="480"><br>
+  <img src="docs/images/driver-screen.jpeg" width="480"><br>
   <em>LCD screen + audio alert system for drivers</em>
 </p>
 
@@ -83,7 +83,7 @@ The thermal camera took weeks to ship. Rather than wait, I built a stand-in: a n
 plus an OpenCV colormap that maps brightness to a thermal-style palette. I pointed the camera at a white deer cutout on an OLED phone screen. On an OLED, the black background emits nothing and the white shape is bright, so under a brightness-as-temperature mapping, it behaves like a warm object against a cold background. That was enough to develop and profile the entire capture → inference → alert pipeline on the Pi, and it turned out to predict real-world throughput accurately: 15 FPS on the fake feed, 15 FPS on the real one.
 
 <p align="center">
-  <img src="images/fake-thermal-pi.png" width="420"><br>
+  <img src="docs/images/fake-thermal-pi.png" width="420"><br>
   <em>Bench testing: phone-screen "deer" detected at 0.84, 15 FPS on the Pi.</em>
 </p>
 
@@ -94,7 +94,7 @@ The obvious failure for a thermal detector on a road is oncoming cars. The engin
 A potential fix is to combine the thermal feed with a visible-light camera and use brightness as a differentiator: headlights are far brighter than anything a deer reflects, so a detection that is both hot and extremely bright in the visible band can be suppressed. The hard part would be the threshold, however. A deer standing in your own headlights is bright too, just not as bright as headlights would be. Also, this would only be benefical during early morning or at night when headlights are on. Granted, those times are when there are the most deer and drivers stand to gain the most benefit from this system at such times.
 
 <p align="center">
-  <img src="images/road-test-fp-car.jpg" width="420"><br>
+  <img src="docs/images/road-test-fp-car.jpg" width="420"><br>
   <em>An example of a false positive from an oncoming car</em>
 </p>
 
