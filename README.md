@@ -1,8 +1,7 @@
 # Thermal Deer Detection Driving Aid for Reducing Rural Animal-Vehicle Collisions
 
-Real-time deer detection for night driving. A 256×192 thermal camera and a Raspberry Pi 4
-mounted in a car, running a YOLO26n detector at ~15 FPS on CPU, with an audible alert and an
-LCD feed for the driver.
+A budget real-time deer detection for night driving with a 256×192 thermal camera and a Raspberry Pi 4
+mounted in a car, running a YOLO26n detector at ~15 FPS on CPU, with an audible alert and LCD screen for the driver.
 
 <p align="center">
   <img src="docs/images/road-test-087.jpg" width="480"><br>
@@ -12,9 +11,9 @@ LCD feed for the driver.
 ---
 
 ## Why
-I'm from a small township in rural Minnesota. Because of the distinct lack of people, deer often run across the road when cars drive by — my family alone has hit multiple deer in the past couple of years. So, to help protect rural drivers facing the same odds, I've built a device that mounts to any car and warns drivers in these situations.
+I'm from a small township in rural Minnesota. Because of the distinct lack of people, deer often run across the road when cars drive by - my family alone has hit multiple deer in the past couple of years. So, to help protect rural drivers facing the same odds, I've built a device that mounts to any car and warns drivers in these situations.
 
-Deer–vehicle collisions happen overwhelmingly at dawn, dusk, and night - exactly when visibility is the lowest. Thermal imaging can help in these scenarios: a deer is a warm object against a cold background. Some high-end vehicles can be optioned with such thermal aid systems for thousands of dollars, so I wanted to see how close a Raspberry Pi and a cheap thermal camera could get for under $500. The goal of this project was to find out whether a useful version of such a system can be created on hardware a student can afford. 
+Deer–vehicle collisions happen overwhelmingly at dawn, dusk, and at night, which is when visibility is the lowest. Thermal imaging can help in these scenarios because a deer shows as a warm object against a cold background. Some high-end vehicles can be optioned with such thermal aid systems for thousands of dollars, so I wanted to see how close a Raspberry Pi and a cheap thermal camera could get for under $500 (including the price of the Pi I already owned). The goal of this project was to find out whether a useful version of such a system can be created on hardware a student like myself can afford. 
 
 ---
 
