@@ -1,0 +1,4 @@
+# Pi runtime (also needs: sudo apt install mpg123)
+ultralytics>=8.4
+opencv-python
+ncnn
